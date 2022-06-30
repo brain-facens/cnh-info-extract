@@ -35,7 +35,7 @@ def main(_webcam:int):
     min_conf = 0.8
 
     # Intro.
-    # tools.INTRO()
+    tools.INTRO()
 
     # Main application.
     while is_running:
