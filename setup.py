@@ -22,6 +22,8 @@ setup(
         "requests",
         "pandas",
         "seaborn",
-        "symspellpy"
+        "symspellpy",
+        "ipython",
+        "psutil"
     ]
 )
