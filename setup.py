@@ -16,6 +16,7 @@ setup(
         "protobuf==3.20.*",
         "opencv-python",
         "matplotlib",
+        "torch",
         "torchvision",
         "PyYAML",
         "requests",

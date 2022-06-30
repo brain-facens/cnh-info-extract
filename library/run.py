@@ -1,8 +1,8 @@
-from library.extra_functions import tools
-from library.extra_functions import *
+from extra_functions import tools
+from extra_functions import *
 
-from library.models import load_model
-from library.models import *
+from model import load_model
+from model import *
 
 
 parser = argparse.ArgumentParser()

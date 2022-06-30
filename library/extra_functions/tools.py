@@ -1,4 +1,4 @@
-from library.extra_functions import *
+from extra_functions import *
 
 
 # COLOR.
