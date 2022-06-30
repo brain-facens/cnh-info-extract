@@ -113,10 +113,8 @@ class CNH_Detect:
         self.__model_path = os.path.join(__curr_path,self.__model_name)
 
     def init(self) -> int:
-        self.__cnh = torch.hub.load("ultralytics/yolov5", "custom", path="../cnh-info-extract/library/models/cnh.pt", device="cpu")
         try:
-            # self.__cnh = torch.hub.load("ultralytics/yolov5", "custom", path=self.__model_path, device="cpu")
-            pass
+            self.__cnh = torch.hub.load("ultralytics/yolov5", "custom", path=self.__model_path, device="cpu")
         except:
            return 0
         else:
