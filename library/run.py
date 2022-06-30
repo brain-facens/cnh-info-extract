@@ -24,6 +24,9 @@ def main(_webcam:int):
         tools.ERROR("Something went wrong when the CNH detector model was initializing.")
         return -1
 
+    # Load names dataset.
+    df_name = tools.AnalysiNames()
+
     # Initializing camera.
     cam = cv2.VideoCapture(_webcam)
     _, video = cam.read()
@@ -65,6 +68,7 @@ def main(_webcam:int):
             is_running = False
         if key == tools.EXTRACT_INFO and not result is None:
             data = ocr.extract_info(result["doc"])
+            data["name"] = df_name.fix_name(data["name"])
             tools.print_results(data)
             tools.save_results(data)
 

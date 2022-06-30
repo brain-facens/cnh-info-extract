@@ -58,5 +58,17 @@ def save_fig_(_image) -> None:
     __img.save("notebooks/img.png")
     print("Saved!")
 
-def fix_name(_name:str) -> str:
-    pass
+
+class AnalysiNames:
+    
+    def __init__(self) -> None:
+        __df_path = os.path.join(os.path.dirname(os.path.relpath(__file__)), "datasets", "base_dados_br.csv")
+        self.__df = pd.read_csv(__df_path)
+        self.__df = self.__df["Nomes"].tolist()
+
+        self.__spellchecker = SymSpell()
+        [self.__spellchecker.create_dictionary_entry(word,1) for word in self.__df] 
+
+    def fix_name(self, _name:str) -> str:
+        __result = self.__spellchecker.lookup(_name, Verbosity.CLOSEST, max_edit_distance=2, include_unknown=True)
+        return __result[0]._term
