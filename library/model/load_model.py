@@ -110,7 +110,7 @@ class CNH_Detect:
 
         __curr_path = os.path.dirname(os.path.realpath(__file__))
         
-        self.__model_path = os.path.join(__curr_path,self.__model_name)
+        self.__model_path = os.path.join(__curr_path,"pre_trained_models",self.__model_name)
 
     def init(self) -> int:
         try:

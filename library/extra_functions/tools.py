@@ -57,3 +57,6 @@ def save_fig_(_image) -> None:
     __img = Image.fromarray(_image, mode="RGB")
     __img.save("notebooks/img.png")
     print("Saved!")
+
+def fix_name(_name:str) -> str:
+    pass
