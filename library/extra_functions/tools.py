@@ -70,5 +70,10 @@ class AnalysiNames:
         [self.__spellchecker.create_dictionary_entry(word,1) for word in self.__df] 
 
     def fix_name(self, _name:str) -> str:
-        __result = self.__spellchecker.lookup(_name, Verbosity.CLOSEST, max_edit_distance=2, include_unknown=True)
-        return __result[0]._term
+        _name = _name.split(" ")
+        __fixed_name = []
+        for name in _name:
+            __result = self.__spellchecker.lookup(name, Verbosity.CLOSEST, max_edit_distance=2, include_unknown=True)
+            __fixed_name.append(__result[0]._term)
+        __fixed_name = " ".join(__fixed_name)
+        return __fixed_name
