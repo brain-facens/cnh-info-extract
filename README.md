@@ -52,5 +52,5 @@ Ao extrair as informações do documento será criado na mesma pasta do projeto 
 
 ## **Dicas**
 >- *Aproxime o documento o mais próximo da câmera em uso e espere que a imagem foque corretamente para uma leitura melhor das informações na imagem.*
->- *Evite tremer a câmera ou o documento. Deixe ambos o mais estático possível.*
+>- *Evite tremer a câmera e o documento. Deixe ambos o mais estático possível.*
 >- *Posicione o documento o mais reto possível para uma melhor extração das informações.*
