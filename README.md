@@ -28,7 +28,7 @@ Pasta utilizada para testar se as instalações foram feitas corretamente.
 python3 -m venv "nome_do_ambiente"
 source /path/to/"nome_do_ambiente"/bin/activate
 ```
-Para preparar o ambiente para a execução da aplicação execute o script setup.py no terminal.
+Para preparar o ambiente para a execução da aplicação execute o script setup.py no terminal. Ele será responsável por instalar todos os pacotes necessários para a demo.
 ```
 pip install .
 ```
