@@ -20,9 +20,10 @@ def main(_webcam:int):
         return -1
     # CNH detector.
     cnh = load_model.CNH_Detect()
-    if not cnh.init():
-        tools.ERROR("Something went wrong when the CNH detector model was initializing.")
-        return -1
+    print(cnh.init())
+    # if not cnh.init():
+    #     tools.ERROR("Something went wrong when the CNH detector model was initializing.")
+    #     return -1
 
     # Initializing camera.
     cam = cv2.VideoCapture(_webcam)
@@ -35,7 +36,7 @@ def main(_webcam:int):
     min_conf = 0.8
 
     # Intro.
-    tools.INTRO()
+    # tools.INTRO()
 
     # Main application.
     while is_running:
