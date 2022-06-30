@@ -47,6 +47,7 @@ python3 library/run.py --source 2
 
 ## **Dados**
 Ao extrair as informações do documento será criado na mesma pasta do projeto um arquivo nomeado como "result.json", contendo todas as informações retiradas do documento.
+
 *É importante resaltar que para uma demo o documento "result.json" será sempre reescrito quando for extraido novas informações, logo, os dados retirados dos documentos não serão guardados e apenas o último registro será salvo. Caso a aplicação não consiga extrair corretamente as informações de um campo expecífico o valor retornado será None para o campo.*
 
 ## **Dicas**
