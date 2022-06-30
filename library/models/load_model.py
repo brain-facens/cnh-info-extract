@@ -111,18 +111,14 @@ class CNH_Detect:
         __curr_path = os.path.dirname(os.path.realpath(__file__))
         
         self.__model_path = os.path.join(__curr_path,self.__model_name)
-        print("TEST 1")
 
     def init(self) -> int:
-        self.__cnh = torch.hub.load("ultralytics/yolov5", "custom", path=self.__model_path, device="cpu")
-        print("TEST 2")
-        return 1
-        # try:
-        #     self.__cnh = torch.hub.load("ultralytics/yolov5", "custom", path=self.__model_path, device="cpu")
-        # except:
-        #    return 0
-        # else:
-        #     return 1
+        try:
+            self.__cnh = torch.hub.load("ultralytics/yolov5", "custom", path=self.__model_path, device="cpu")
+        except:
+           return 0
+        else:
+            return 1
 
     def detection(self, _frame) -> None or dict:
         
